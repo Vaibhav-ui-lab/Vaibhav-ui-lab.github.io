@@ -1,0 +1,658 @@
+/* Modern CSS Reset & Core Custom Properties */
+:root {
+    /* Color Palette - Dark Theme Default */
+    --bg-gradient: radial-gradient(circle at top left, #0d121f, #080a10);
+    --card-bg: rgba(18, 24, 38, 0.65);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent-primary: #10b981; /* Emerald */
+    --accent-secondary: #06b6d4; /* Teal */
+    --accent-gradient: linear-gradient(135deg, #10b981, #06b6d4);
+    --header-accent-bg: rgba(16, 185, 129, 0.15);
+    --header-accent-border: rgba(16, 185, 129, 0.3);
+    --shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+    --badge-bg: rgba(255, 255, 255, 0.04);
+    --badge-border: rgba(255, 255, 255, 0.1);
+    --bullet-color: #10b981;
+    --transition-speed: 0.3s;
+}
+
+/* Light Theme Variables */
+body.light-theme {
+    --bg-gradient: radial-gradient(circle at top left, #f8fafc, #e2e8f0);
+    --card-bg: rgba(255, 255, 255, 0.8);
+    --border-color: rgba(0, 0, 0, 0.08);
+    --text-primary: #0f172a;
+    --text-muted: #475569;
+    --accent-primary: #059669;
+    --accent-secondary: #0d9488;
+    --accent-gradient: linear-gradient(135deg, #059669, #0d9488);
+    --header-accent-bg: rgba(5, 150, 105, 0.1);
+    --header-accent-border: rgba(5, 150, 105, 0.2);
+    --shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+    --badge-bg: rgba(0, 0, 0, 0.03);
+    --badge-border: rgba(0, 0, 0, 0.06);
+    --bullet-color: #059669;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    min-height: 100vh;
+    line-height: 1.5;
+    padding: 2.5rem 1.5rem;
+    transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Interactive Control Panel (Floating & Sleek) */
+.control-panel {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 100;
+    transition: all var(--transition-speed) ease;
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.control-btn {
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
+    color: var(--text-primary);
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: all 0.2s ease;
+}
+
+.control-btn:hover {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.control-btn:active {
+    transform: translateY(0);
+}
+
+.control-btn svg.icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Hide inactive theme icon */
+body.dark-theme .theme-icon-dark,
+body.light-theme .theme-icon-light {
+    display: none;
+}
+
+.print-tip {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Resume Main Wrapper (Glassmorphism design for Screen) */
+.resume-wrapper {
+    max-width: 950px;
+    width: 100%;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 3rem;
+    transition: all var(--transition-speed) ease;
+}
+
+/* Resume Header Styling */
+.resume-header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.header-main {
+    text-align: center;
+}
+
+.candidate-name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.25rem;
+}
+
+.candidate-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--text-muted);
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+    color: var(--accent-primary);
+}
+
+.contact-item svg.icon {
+    width: 15px;
+    height: 15px;
+    color: var(--accent-primary);
+}
+
+/* Grid Layout (Two Column: Main Content & Sidebar) */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 2.5rem;
+}
+
+/* Standard Section Elements */
+.section {
+    margin-bottom: 2.2rem;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+/* About me */
+.about-text {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Work Experience Timeline */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 0rem;
+    transition: transform 0.2s ease;
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.job-role {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.company-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-secondary);
+    margin-left: 0.5rem;
+}
+
+/* Bullet styling */
+.company-name::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: var(--text-muted);
+}
+
+.job-date {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.job-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.job-bullets li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    position: relative;
+    padding-left: 1.1rem;
+}
+
+.job-bullets li::before {
+    content: "•";
+    color: var(--bullet-color);
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0.1rem;
+    top: -0.1rem;
+}
+
+/* Technical Skills Card Styling */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.skills-category {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    padding: 0.9rem;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+body.light-theme .skills-category {
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.skills-category:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-2px);
+}
+
+.category-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.05em;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.skill-badge {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.3rem 0.7rem;
+    border-radius: 6px;
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
+    color: var(--text-muted);
+    transition: all 0.25s ease;
+}
+
+/* Active Core highlights */
+.skills-container.highlight-core .skill-badge.core {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border-color: transparent;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.2);
+}
+
+/* Education Layout */
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.education-item {
+    position: relative;
+    padding-bottom: 0.2rem;
+}
+
+.edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.edu-degree {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.edu-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.edu-school {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    margin-bottom: 0.25rem;
+}
+
+.edu-description {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments for Screen */
+@media (max-width: 850px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    
+    .resume-wrapper {
+        padding: 2rem 1.5rem;
+    }
+    
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .candidate-name {
+        font-size: 2.2rem;
+        letter-spacing: 0.1em;
+    }
+}
+
+/* ==========================================================================
+   Print Stylesheet - Optimizing for a Perfect Single Page A4 / Letter PDF
+   ========================================================================== */
+@media print {
+    /* Set page margins & size */
+    @page {
+        size: A4 portrait;
+        margin: 8mm 8mm; /* Tiny margins to secure single-page layout */
+    }
+
+    body {
+        background: #ffffff !important;
+        color: #111111 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 8.5pt !important; /* Smaller text size for print scaling */
+        line-height: 1.35 !important;
+        min-height: auto !important;
+        width: 100% !important;
+    }
+
+    /* Force light theme elements for ink saving */
+    * {
+        color-scheme: light !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Hide screen-only interactive elements */
+    .control-panel, 
+    .print-tip,
+    .screening-only {
+        display: none !important;
+    }
+
+    /* Expand wrapper to full page without grid container frames */
+    .resume-wrapper {
+        max-width: 100% !important;
+        width: 100% !important;
+        background: transparent !important;
+        border: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+    }
+
+    /* Keep header clean & compact */
+    .resume-header {
+        border-bottom: 2px solid #222 !important;
+        padding-bottom: 0.8rem !important;
+        margin-bottom: 1rem !important;
+        gap: 0.5rem !important;
+    }
+
+    .candidate-name {
+        font-size: 20pt !important;
+        letter-spacing: 0.1em !important;
+        background: none !important;
+        -webkit-text-fill-color: #111111 !important;
+        color: #111111 !important;
+        font-weight: 800 !important;
+        margin-bottom: 0.1rem !important;
+    }
+
+    .candidate-title {
+        font-size: 10pt !important;
+        letter-spacing: 0.2em !important;
+        color: #444 !important;
+    }
+
+    .contact-info {
+        gap: 1.2rem !important;
+        font-size: 7.5pt !important;
+        justify-content: center !important;
+    }
+
+    .contact-item {
+        color: #333 !important;
+    }
+
+    .contact-item svg.icon {
+        color: #333 !important;
+    }
+
+    /* Structural Grid Adjustment - Single-column sequential flow for perfect ATS parsing */
+    .resume-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0.8rem !important;
+    }
+
+    .section {
+        margin-bottom: 1rem !important;
+    }
+
+    .section-title {
+        font-size: 9.5pt !important;
+        color: #111 !important;
+        border-bottom: 1.5px solid #222 !important;
+        padding-bottom: 0.2rem !important;
+        margin-bottom: 0.6rem !important;
+    }
+
+    .about-text {
+        font-size: 8pt !important;
+        color: #222 !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Timeline and Work details */
+    .timeline {
+        gap: 0.8rem !important;
+    }
+
+    .timeline-item {
+        padding-left: 0 !important;
+    }
+
+    .timeline-header {
+        margin-bottom: 0.25rem !important;
+    }
+
+    .job-role {
+        font-size: 9pt !important;
+        color: #111 !important;
+    }
+
+    .company-name {
+        font-size: 8pt !important;
+        color: #333 !important;
+    }
+
+    .job-date {
+        font-size: 7.5pt !important;
+        color: #444 !important;
+    }
+
+    .job-bullets {
+        gap: 0.25rem !important;
+    }
+
+    .job-bullets li {
+        font-size: 7.8pt !important;
+        color: #333 !important;
+        padding-left: 0.8rem !important;
+    }
+
+    .job-bullets li::before {
+        color: #111 !important;
+        font-size: 0.8rem !important;
+        left: 0.1rem !important;
+    }
+
+    /* Skills display (no badges with heavy fills, clean text tags instead) */
+    .skills-container {
+        gap: 0.6rem !important;
+    }
+
+    .skills-category {
+        border: none !important;
+        padding: 0 !important;
+        background: transparent !important;
+    }
+
+    .skills-category:hover {
+        transform: none !important;
+    }
+
+    .category-title {
+        font-size: 7.5pt !important;
+        color: #111 !important;
+        margin-bottom: 0.25rem !important;
+    }
+
+    .skills-list {
+        gap: 0.3rem !important;
+    }
+
+    .skill-badge {
+        font-size: 7.5pt !important;
+        padding: 0.1rem 0.4rem !important;
+        background: #f1f5f9 !important;
+        border: 1px solid #cbd5e1 !important;
+        color: #222222 !important;
+        border-radius: 4px !important;
+    }
+
+    /* Print specific - highlight core tags even without JS trigger on print */
+    .skill-badge.core {
+        font-weight: 700 !important;
+        border-color: #475569 !important;
+    }
+
+    /* Education display */
+    .education-list {
+        gap: 0.6rem !important;
+    }
+
+    .edu-header {
+        margin-bottom: 0.1rem !important;
+    }
+
+    .edu-degree {
+        font-size: 8.5pt !important;
+        color: #111 !important;
+    }
+
+    .edu-date {
+        font-size: 7.5pt !important;
+        color: #444 !important;
+    }
+
+    .edu-school {
+        font-size: 7.8pt !important;
+        color: #111 !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.1rem !important;
+    }
+
+    .edu-description {
+        font-size: 7.5pt !important;
+        color: #333 !important;
+        line-height: 1.3 !important;
+    }
+}
