@@ -21,19 +21,43 @@ Versatile and detail-oriented Full Stack Developer with nearly 4 years of experi
 
 ## WORK EXPERIENCE
 
-### Technical Associate
-**TechHaus Software Services** | *March 2023 – Present*
-* **Full Stack Development:** Designed, developed, and maintained full-stack web applications, integrating responsive Angular/React frontends with scalable Spring Boot and Python backend services.
-* **Third-Party API Integrations:** Developed robust, fault-tolerant integrations for QuickBooks and Koorier using asynchronous messaging queues (Celery/RabbitMQ), ensuring high availability and handling rate limits.
-* **UI/UX Optimization & Accessibility:** Upgraded and optimized UI designs across core portals to enhance responsiveness and accessibility, improving overall user engagement and web usability.
-* **Database Design & Performance:** Modeled complex relational (PostgreSQL, MySQL) and NoSQL (MongoDB) database schemas, optimized queries, and implemented Redis caching to reduce latency by 35%.
-* **Translation & Localization:** Engineered backend localization services and integrated them with frontend frameworks to support dynamic multi-language applications for global users.
-* **Agile & Engineering Best Practices:** Maintained clean, self-documented, and thoroughly tested code (Jest, PyTest, JUnit). Participated actively in code reviews, sprint planning, and mentorship of junior engineers.
+### Senior Associate Technology
+**TechHaus Software Services** | *April 2026 – Present*
+* **Full Stack Architecture & Leadership:** Lead design and development of end-to-end web applications, defining tech stacks and integrating responsive Angular/React frontends with robust Spring Boot/Python backend microservices.
+* **Database & Performance Optimization:** Architected relational (PostgreSQL, MySQL) and NoSQL (MongoDB) schemas, optimized database queries, and implemented Redis caching to reduce latency by 35%.
+* **Engineering Standards & Mentorship:** Lead code reviews, direct sprint planning in Agile environments, and mentor junior engineers, establishing clean code patterns and automated testing workflows (Jest, PyTest, JUnit).
+
+### Associate Technology
+**TechHaus Software Services** | *March 2023 – April 2026*
+* **Microservices & API Integrations:** Designed and developed RESTful APIs and robust integrations for QuickBooks and Koorier using asynchronous messaging queues (Celery/RabbitMQ), ensuring high availability.
+* **UI/UX Optimization & Accessibility:** Upgraded and optimized frontend interfaces to enhance accessibility (WCAG compliance) and responsiveness, improving user engagement.
+* **Translation & Localization:** Engineered backend translation services and integrated them with frontend localization libraries to support dynamic multi-language applications.
+* **Collaboration & Testing:** Worked cross-functionally with product managers and designers to write clean, maintainable code, creating comprehensive unit and integration tests.
 
 ### Internship
 **TechHaus Software Services** | *September 2022 – February 2023*
 * **Cloud & Observability (AWS):** Containerized applications using Docker, managed deployments on AWS (EC2, S3), and designed an automated spend monitoring pipeline that integrated AWS billing logs into Power BI dashboards.
 * **Security & Authentication:** Implemented OAuth2 and JWT-based authentication mechanisms to secure APIs. Integrated Snyk scans into the CI/CD pipeline to continuously detect and resolve security vulnerabilities (input validation, encryption, SQL injection).
+
+---
+
+## PROJECTS
+
+### Influencer Engagement & Sponsorship Coordination Platform
+*React, FastAPI, PostgreSQL, Redis, Celery*
+* Developed a full-stack platform connecting brands with influencers. Engineered a dynamic campaign dashboard, dynamic analytics tracking, and automated email/notification workflows via Redis-backed message queues.
+
+### Trekking Management Application
+*Python (Flask), SQLite, Docker*
+* Built a tour scheduling and booking backend system. Integrated booking rate calculators, itinerary generators, and guide allocation algorithms; containerized using Docker.
+
+### Quiz Master
+*Angular, Spring Boot, WebSocket, MongoDB*
+* Created a real-time, multi-user quiz platform. Implemented WebSocket-based bidirectional communication for real-time multiplayer scoring and live leaderboards.
+
+### Hospital Management System
+*Angular, Spring Boot, MySQL, Spring Security*
+* Designed a management platform patient portal and clinical scheduler. Implemented Role-Based Access Control (RBAC) and encrypted billing transactions for patient data privacy.
 
 ---
 
