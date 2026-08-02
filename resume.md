@@ -17,20 +17,20 @@
 ## WORK EXPERIENCE
 
 ### Senior Associate Technology
-**TechHaus Software Services** | *April 2026 – Present*
+**TechHaus Software Services Private Limited** | *April 2026 – Present*
 * **Full Stack Architecture & Leadership:** Lead end-to-end SDLC design and development of scalable web applications, taking full feature ownership from planning to cloud deployment (AWS/Docker). Integrate responsive Angular/React frontends with high-performance Spring Boot, Python (FastAPI/Django), and Node.js backend microservices.
 * **Database & Performance Optimization:** Architect relational (PostgreSQL, MySQL) and NoSQL (MongoDB) schemas, optimize database queries, and implement Redis caching to reduce latency by 35%.
 * **Engineering Standards & Mentorship:** Lead code reviews, direct sprint planning in Agile teams, and mentor junior engineers, establishing clean code patterns and automated testing workflows (Jest, PyTest, JUnit).
 
 ### Associate Technology
-**TechHaus Software Services** | *March 2023 – April 2026*
+**TechHaus Software Services Private Limited** | *March 2023 – April 2026*
 * **Microservices & API Integrations:** Designed and developed RESTful APIs and robust integrations for QuickBooks and Koorier using asynchronous messaging queues (Celery/RabbitMQ), ensuring high availability.
 * **UI/UX Optimization & Accessibility:** Upgraded and optimized frontend interfaces to enhance accessibility (WCAG compliance) and responsiveness, improving user engagement across web applications.
 * **Translation & Localization:** Engineered backend translation services and integrated them with frontend localization libraries to support dynamic multi-language applications for global users.
 * **Agile Collaboration & Quality:** Worked cross-functionally with product managers and designers in Agile teams to write clean, maintainable code, creating comprehensive unit and integration tests.
 
 ### Internship
-**TechHaus Software Services** | *September 2022 – February 2023*
+**TechHaus Software Services Private Limited** | *September 2022 – February 2023*
 * **Cloud & Observability (AWS):** Containerized applications using Docker, managed deployments on AWS (EC2, S3), and designed an automated spend monitoring pipeline that integrated AWS billing logs into Power BI dashboards.
 * **Security & Authentication:** Implemented OAuth2 and JWT-based authentication mechanisms to secure APIs. Integrated Snyk scans into the CI/CD pipeline to continuously detect and resolve security vulnerabilities (input validation, encryption, SQL injection).
 
